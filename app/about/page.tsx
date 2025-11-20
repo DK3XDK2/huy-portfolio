@@ -117,17 +117,14 @@ export default function AboutPage() {
           <div className="mt-6 space-y-2 text-sm">
             <p>
               <span className="font-semibold">Zalo:</span>{" "}
-              <a
-                href="https://zalo.me/0778366110"
-                className="text-cyan-400 hover:underline"
-              >
+              <a href="/contact" className="text-cyan-400 hover:underline">
                 Ấn vào đây
               </a>
             </p>
             <p>
               <span className="font-semibold">Facebook:</span>{" "}
               <a
-                href="https://www.facebook.com/vu.q.huy.795955"
+                href="/contact"
                 className="text-cyan-400 hover:underline"
                 target="_blank"
               >
@@ -136,7 +133,7 @@ export default function AboutPage() {
             </p>
             <p>
               <span className="font-semibold">Instagram:</span>{" "}
-              <a href="#" className="text-cyan-400 hover:underline">
+              <a href="/contact" className="text-cyan-400 hover:underline">
                 Ấn vào đây
               </a>
             </p>
