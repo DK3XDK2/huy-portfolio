@@ -1,11 +1,9 @@
-"use client";
-
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Navbar from "../components/Navbar";
-import { useEffect } from "react";
 import Script from "next/script";
+import Navbar from "../components/Navbar";
+import FbclidCleaner from "@/components/FbclidCleaner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,15 +17,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  useEffect(() => {
-    const url = new URL(window.location.href);
-
-    if (url.searchParams.has("fbclid")) {
-      url.searchParams.delete("fbclid");
-      window.history.replaceState({}, "", url.toString());
-    }
-  }, []);
-
   return (
     <html lang="vi">
       <body className={`${inter.className} bg-black text-slate-100`}>
@@ -45,7 +34,9 @@ export default function RootLayout({
             gtag('config', 'G-R49PTG8TEG');
           `}
         </Script>
+
         {}
+        <FbclidCleaner />
 
         <div className="pointer-events-none fixed inset-0 overflow-hidden">
           <div className="absolute -top-40 -left-20 w-[600px] h-[600px] bg-fuchsia-600/10 rounded-full blur-[120px]" />
@@ -55,14 +46,7 @@ export default function RootLayout({
         <div className="relative min-h-screen flex flex-col">
           <Navbar />
 
-          <main
-            className="
-              flex-1 
-              px-4 sm:px-8 md:px-16 lg:px-32 
-              py-10
-              bg-gradient-to-br from-slate-900 via-slate-950 to-black
-            "
-          >
+          <main className="flex-1 px-4 sm:px-8 md:px-16 lg:px-32 py-10 bg-gradient-to-br from-slate-900 via-slate-950 to-black">
             {children}
           </main>
 
