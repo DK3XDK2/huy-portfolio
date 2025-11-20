@@ -123,11 +123,7 @@ export default function AboutPage() {
             </p>
             <p>
               <span className="font-semibold">Facebook:</span>{" "}
-              <a
-                href="/contact"
-                className="text-cyan-400 hover:underline"
-                target="_blank"
-              >
+              <a href="/contact" className="text-cyan-400 hover:underline">
                 Ấn vào đây
               </a>
             </p>

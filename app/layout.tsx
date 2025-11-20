@@ -9,7 +9,7 @@ import GAListener from "@/components/GAListener";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Vũ Quang Huy | Portfolio",
+  title: "My Bio",
   description: "Portfolio cá nhân Vũ Quang Huy - Web Developer.",
 };
 
