@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import Navbar from "../components/Navbar";
 import FbclidCleaner from "@/components/FbclidCleaner";
+import GAListener from "@/components/GAListener";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang="vi">
       <body className={`${inter.className} bg-black text-slate-100`}>
         {}
+        <GAListener />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-R49PTG8TEG"
           strategy="afterInteractive"
