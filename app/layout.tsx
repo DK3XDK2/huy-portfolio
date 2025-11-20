@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "../components/Navbar";
 import { useEffect } from "react";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,22 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body className={`${inter.className} bg-black text-slate-100`}>
+        {}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-R49PTG8TEG"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-R49PTG8TEG');
+          `}
+        </Script>
+        {}
+
         <div className="pointer-events-none fixed inset-0 overflow-hidden">
           <div className="absolute -top-40 -left-20 w-[600px] h-[600px] bg-fuchsia-600/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[140px]" />
