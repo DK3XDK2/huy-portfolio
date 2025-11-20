@@ -75,7 +75,6 @@ export default function ContactPage() {
 
   return (
     <div className="w-full min-h-screen flex items-center justify-center relative">
-      {}
       {icons.map((item, i) => {
         const radius = 140;
         const x = Math.cos((item.angle * Math.PI) / 180) * radius;
@@ -122,40 +121,54 @@ export default function ContactPage() {
             )}
 
             {}
-            <motion.div
-              onMouseEnter={() => setHovered(i)}
-              onMouseLeave={() => setHovered(null)}
-              className={`p-4 rounded-full border border-slate-700 transition
-                ${item.defaultBg} ${item.textColor}`}
-              whileHover={{
-                scale: 1.15,
-                ...(item.hoverBg === "instagram"
-                  ? {
-                      background:
-                        "linear-gradient(45deg, #facc15, #ec4899, #8b5cf6)",
-                      boxShadow: "0 0 25px rgba(236,72,153,0.7)",
-                    }
-                  : {
-                      backgroundColor: item.hoverBg,
-                      boxShadow: "0 0 20px rgba(255,255,255,0.25)",
-                    }),
-              }}
-              whileTap={{
-                scale: 1.15,
-                ...(item.hoverBg === "instagram"
-                  ? {
-                      background:
-                        "linear-gradient(45deg, #facc15, #ec4899, #8b5cf6)",
-                      boxShadow: "0 0 25px rgba(236,72,153,0.7)",
-                    }
-                  : {
-                      backgroundColor: item.hoverBg,
-                      boxShadow: "0 0 20px rgba(255,255,255,0.25)",
-                    }),
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                if (window.gtag) {
+                  window.gtag("event", "contact_icon_click", {
+                    icon_name: item.label,
+                    link: item.link,
+                  });
+                }
               }}
             >
-              {item.icon}
-            </motion.div>
+              <motion.div
+                onMouseEnter={() => setHovered(i)}
+                onMouseLeave={() => setHovered(null)}
+                className={`p-4 rounded-full border border-slate-700 transition
+                  ${item.defaultBg} ${item.textColor}`}
+                whileHover={{
+                  scale: 1.15,
+                  ...(item.hoverBg === "instagram"
+                    ? {
+                        background:
+                          "linear-gradient(45deg, #facc15, #ec4899, #8b5cf6)",
+                        boxShadow: "0 0 25px rgba(236,72,153,0.7)",
+                      }
+                    : {
+                        backgroundColor: item.hoverBg,
+                        boxShadow: "0 0 20px rgba(255,255,255,0.25)",
+                      }),
+                }}
+                whileTap={{
+                  scale: 1.15,
+                  ...(item.hoverBg === "instagram"
+                    ? {
+                        background:
+                          "linear-gradient(45deg, #facc15, #ec4899, #8b5cf6)",
+                        boxShadow: "0 0 25px rgba(236,72,153,0.7)",
+                      }
+                    : {
+                        backgroundColor: item.hoverBg,
+                        boxShadow: "0 0 20px rgba(255,255,255,0.25)",
+                      }),
+                }}
+              >
+                {item.icon}
+              </motion.div>
+            </a>
           </motion.div>
         );
       })}
@@ -165,7 +178,6 @@ export default function ContactPage() {
         onClick={() => {
           if (isLocked) return;
           setIsLocked(true);
-
           setOpen(!open);
 
           setTimeout(() => {
@@ -173,9 +185,9 @@ export default function ContactPage() {
           }, 600);
         }}
         className="relative z-10 w-20 h-20 rounded-full bg-gradient-to-r 
-  from-fuchsia-500 via-purple-500 to-cyan-400 
-  shadow-[0_0_30px_rgba(255,0,255,0.5)]
-  flex items-center justify-center text-black font-bold text-xl"
+          from-fuchsia-500 via-purple-500 to-cyan-400 
+          shadow-[0_0_30px_rgba(255,0,255,0.5)]
+          flex items-center justify-center text-black font-bold text-xl"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
