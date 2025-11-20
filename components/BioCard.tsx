@@ -21,7 +21,7 @@ export default function BioCard() {
 
       <div className="relative">
         <p className="text-xs uppercase tracking-[0.3em] text-fuchsia-300 mb-2">
-          Fullstack Web Developer
+          Web Developer
         </p>
 
         {}
@@ -55,8 +55,9 @@ export default function BioCard() {
         {}
         <div className="space-y-4 mb-6">
           <Skill label="HTML & CSS" percent={90} />
-          <Skill label="JavaScript (ES6+)" percent={70} />
-          <Skill label="Git & GitHub" percent={65} />
+          <Skill label="JavaScript (ES6+)" percent={75} />
+          <Skill label="Typescript/Next.JS" percent={65} />
+          <Skill label="Git & GitHub" percent={60} />
           <Skill label="MySQL / SQL" percent={55} />
           <Skill label="Node.js & Express" percent={50} />
         </div>
