@@ -55,9 +55,9 @@ export default function BioCard() {
         {}
         <div className="space-y-4 mb-6">
           <Skill label="HTML & CSS" percent={90} />
-          <Skill label="JavaScript (ES6+)" percent={80} />
-          <Skill label="Git & GitHub" percent={75} />
-          <Skill label="MySQL / SQL" percent={70} />
+          <Skill label="JavaScript (ES6+)" percent={70} />
+          <Skill label="Git & GitHub" percent={65} />
+          <Skill label="MySQL / SQL" percent={55} />
           <Skill label="Node.js & Express" percent={50} />
         </div>
 
