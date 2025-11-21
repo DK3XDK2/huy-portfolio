@@ -63,7 +63,7 @@ export default function AboutPage() {
             <div className="space-y-3 text-sm">
               <p>
                 <span className="font-semibold">Ngày sinh:</span>{" "}
-                <span className="text-cyan-400">12/08/2006</span>
+                <span className="text-cyan-400">1x/0x/200x</span>
               </p>
               <p>
                 <span className="font-semibold">Website:</span>{" "}
@@ -92,7 +92,7 @@ export default function AboutPage() {
             {}
             <div className="space-y-3 text-sm">
               <p>
-                <span className="font-semibold">Tuổi:</span> 19
+                <span className="font-semibold">Tuổi:</span> 1X
               </p>
               <p>
                 <span className="font-semibold">Trình độ:</span> Sinh viên ĐH

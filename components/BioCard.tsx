@@ -35,7 +35,7 @@ export default function BioCard() {
 
         <p className="text-sm text-slate-300 mb-4">
           Sinh ngày{" "}
-          <span className="font-medium text-cyan-300">12/08/2006</span>, hiện
+          <span className="font-medium text-cyan-300">??/??/200?</span>, hiện
           đang sống tại <span className="font-medium">Thái Nguyên</span> và học
           tại
           <span className="font-medium text-cyan-300">
